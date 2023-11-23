@@ -1,0 +1,213 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&family=Roboto:ital,wght@1,300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    /**boyut ayarlıyor*/
+    transition: .6s;
+    font-family: 'poppins';
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    /**tam ortalıyor soldan sayfayı */
+    align-items: center;
+    /** sayfanın ortasından ortalıyor */
+    justify-content: center;
+    background-color: #ffdfdf;
+}
+
+.login-wrapper{
+    /** bu sayede ana ekran üzerine beyaz box açmış oluyoruz login arka fonu için*/
+    height: 580px;
+    width: 980px;
+    background-color: #fff;
+    display: flex;
+    /** bu kodlar ile açtığımız box'ın etrafına border tarzı gölgeli çizgiler atıyoruz*/
+    gap: 12px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: -5px -2px 6px crimson;
+}
+
+h2{
+    /**h2 de Login ve Register'a renk verdik */
+    color: rgb(255, 57, 96);
+    /** yazıların boyutunu ayarladık login ve register için*/
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.5px;
+    margin-top: 55px; /** bununla ortaladık diyebiliriz box sayfasının solundan*/
+}
+
+.login-wrapper .left{
+    height: 580px;
+    width: 40%;
+    background: url(img.jpg);
+    /** box içinde ki fotomuzun ekrana tam oturmasını sağlıyoruz!*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /**Box içinde ki fotomuzun login signup yazısını sol en alta alıyoruz*/
+    align-items: end;
+    /**yanyana olan yazımısı sol en alttan sağ en üste alıp alt alta yapıyoruz*/
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 180px 30px; /** login signup yazımısı hareket ettiriyoruz biraz*/
+    gap: 40px; /** iki yazımısın arasını birbirinden açıp uzaklaştırıyoruz*/
+    position: relative;
+    z-index: 99;
+}
+
+.element{
+    /** sol slide üzerine box açıyoruz küçük*/
+    height: 60px;
+    width: 120px;
+    background-color: rgb(7, 204, 171);
+    /**login yazımızı beyaz boxın içine alıyoruz bu kodlarla*/
+    position: absolute;
+    top: 28.5%;
+    right: 0;
+    z-index: -1;
+    border-radius: 144px 0 0 144px;
+}
+
+.login-wrapper .right{
+    height: 580px;
+    width: 60%;
+}
+
+.login-wrapper .right .card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5%;
+}
+
+input{
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgb(10, 161, 153);
+    border-radius: 30px;
+    outline: none;
+    font-size: 14px;
+    padding-left: 14px !important;
+}
+
+.box{
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+i{
+    /**iconları sağ başa inputların yanına getiriyoruz*/
+    position: absolute;
+    top: 12px;
+    /**iconları input içine yerleştiriyoruz sağ tarafa*/
+    right: 20px;
+    z-index: 9;
+    color: rgb(255, 57, 99);
+}
+
+h3{
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+input[type="checkbox"]{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+button{
+    /**button boyutu ve çevresinde ki border rengi ve border şekli ve button içi rengi*/
+    height: 45px;
+    border: 0.5px solid #a48df5;
+    border-radius: 30px;
+    background-color: #806bf7;
+    /**login yazsının rengi ve şekilleri*/
+    color: #fff;
+    width: 100%;
+    font-size: 1.3rem;
+    -webkit-text-stroke-width: .5px;
+    cursor: pointer;
+}
+
+button:hover{
+    /** hover ile renk veriyoruz. mouse login üzerine gelince renk değiştirecek */
+    border-color: transparent;
+    background-color: #171717;
+}
+
+.login-container,.regis-container{
+    /** register ve login başlığını üst üste içe içe getiriyoruz öncelikle*/
+    position: absolute;
+    width: 60% !important;
+    height: 100%;
+    top: -20px;
+    left: 40%;
+}
+
+/**bununla login ve register başlıkları düzeliyor*/
+.regis-container{
+    top: 100%;
+}
+
+.regisCall{
+    top: -8% !important;
+}
+.LoginRef{
+    top: -85%;
+}
+.LoginCall{
+    top: 4%;
+}
+.regisRef{
+   top: 100% !important; 
+}
+
+.position{
+    top: 40%;
+}
+
+
+/**Mobile*/
+@media screen and (max-width:900px) {
+    .login-wrapper{
+        height: 550px;
+        width: 750px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .login-wrapper{
+        height: 500px;
+        width: 650px;
+    }
+    .LoginCall{
+        top: 0;
+    }
+    .LoginRef{
+        top: -100%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .login-wrapper{
+        height: 580px;
+        width: 420px;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="left">
+                <div class="element"></div>
+                <h3 id="btnlogin">Login</h3>
+                <h3 id="btnsignup">Signup</h3>
+            </div>
+            <div class="right">
+                <div class="card login-container">
+                    <h2>Login</h2>
+                    <div class="box">
+                        <input type="text" placeholder="Username">
+                        <!--icon-->
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="box">
+                        <!--icon profile-->
+                        <input type="password" placeholder="Password">
+                        <!--icon lock-->
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <!--icon profile-->
+                    <div class="box">
+                        <!--icon profile-->
+                        <input type="checkbox">
+                        <!--checknox(kılik kutusu)-->
+                        Remember me
+                    </div>
+                     <button>Login</button>
+                     <p>Hesabın yok mu ? <a href="#" id="Reg_link">Hemen üyelik oluştur!</a></p>
+                </div>
+
+                <div class="card regis-container">
+                    <h2>Register</h2>
+                    <div class="box">
+                        <input type="text" placeholder="Username">
+                        <!--icon-->
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="box">
+                        <input type="email" placeholder="Email">
+                        <!--icon-->
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    
+                    <div class="box">
+                        <!--icon profile-->
+                        <input type="password" placeholder="Password">
+                        <!--icon lock-->
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <!--icon profile-->
+                    <div class="box">
+                        <!--icon profile-->
+                        <input type="checkbox">
+                        <!--checknox(kılik kutusu)-->
+                        Remember me
+                    </div>
+                     <button>Register</button>
+                     <p>Zaten hesabın var mı ? <a href="#" id="Login_link">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let login_link = document.querySelector("#Login_link")
+        let reg_link = document.querySelector("#Reg_link")
+
+        let btn_login = document.querySelector("#btnlogin")
+        let btn_signup = document.querySelector("#btnsignup")
+
+        let element = document.querySelector(".element")
+
+        let Login_Container = document.querySelector(".login-container")
+        let Regis_Container = document.querySelector(".regis-container")
+
+        reg_link.addEventListener("click",function () {  
+            Regis_Container.classList.add("regisCall")
+            Login_Container.classList.add("LoginRef")
+
+            Regis_Container.classList.remove("regisRef")
+            Login_Container.classList.remove("LoginCall")
+
+            element.classList.add("position")
+        })
+
+        login_link.addEventListener("click",function(){
+            Regis_Container.classList.remove("regisCall")
+            Login_Container.classList.remove("LoginRef")
+
+            Regis_Container.classList.add("regisRef")
+            Login_Container.classList.add("LoginCall")
+
+            element.classList.add("position")
+        })
+//*Sol sliderda ki login ve signup'I aktif ediyoruz*/
+
+        btn_signup.addEventListener("click",function () {  
+            Regis_Container.classList.add("regisCall")
+            Login_Container.classList.add("LoginRef")
+
+            Regis_Container.classList.remove("regisRef")
+            Login_Container.classList.remove("LoginCall")
+
+            element.classList.add("position")
+        })
+
+        btn_login.addEventListener("click",function(){
+            Regis_Container.classList.remove("regisCall")
+            Login_Container.classList.remove("LoginRef")
+
+            Regis_Container.classList.add("regisRef")
+            Login_Container.classList.add("LoginCall")
+
+            element.classList.add("position")
+        })
+    </script>
+</body>
+</html>
